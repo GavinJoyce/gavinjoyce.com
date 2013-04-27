@@ -1,0 +1,49 @@
+body {
+  font-size: 18px;
+  line-height: 26px;
+  background-color: #eee;
+  background-image: url('/img/background.png');
+  font-family: 'Roboto', sans-serif;
+  color: #444;
+}
+
+h3 {
+  margin-top: 20px;
+  margin-bottom: 8px;
+}
+
+.content {
+  background-color: white;
+  padding: 20px;
+  border-right: 1px solid #e0ebfa;
+  min-height: 1400px;
+  max-width: 1000px;
+}
+
+article { max-width: 920px; }
+
+article h2 {
+  color: #f16666;
+  line-height: 26px;
+  margin-bottom: 2px;
+  font-weight: bold;
+}
+
+article time {
+  font-size: 70%;
+}
+
+section.about {
+  margin-top: 20px;
+  text-shadow: 1px 1px 2px white;
+}
+  section.about h1 {
+    color: #1a100d;
+    font-size: 28px !important;
+    margin-top: -20px;
+  }
+
+  section.about img.photo {
+    width: 150px;
+    margin-bottom: 20px;
+  }

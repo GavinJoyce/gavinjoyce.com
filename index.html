@@ -1,0 +1,11 @@
+---
+layout: default
+---
+
+{% for post in site.posts %}
+  <article>
+    <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+    <small>Apr 1 2013</small>
+  </article>
+{% endfor %}
+
