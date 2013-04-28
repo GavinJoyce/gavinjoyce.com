@@ -15,11 +15,12 @@ title: Introducing RestPack
 </p>
 
 <blockquote>
-  <p>Views in Ember.js are typically only created for the following reasons:</p>
+  <p>RestPack Services are</p>
 
   <ul>
-    <li>When you need sophisticated handling of user events</li>
-    <li>When you want to create a re-usable component</li>
+    <li>Simple</li>
+    <li>Focused</li>
+    <li>Fast</li>
   </ul>
 </blockquote>
 
