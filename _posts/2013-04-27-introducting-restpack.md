@@ -3,43 +3,40 @@ layout: blog_post
 title: Introducing RestPack
 ---
 
-<h3>Services, lots of 'em</h3>
+###Services, lots of 'em
 
-<p>
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-</p>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-<blockquote>
-  <p>RestPack Services are</p>
+> RestPack Services are:
+> * Simple
+> * Focused
+> * Fast
 
-  <ul>
-    <li>Simple</li>
-    <li>Focused</li>
-    <li>Fast</li>
-  </ul>
-</blockquote>
+Numbered Lists are:
 
-<p>
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-</p>
+1. Ok
+2. Numbered
+3. Lists
 
-{% highlight ruby %}
-def foo
-  puts 'foo'
-end
-{% endhighlight %}
+***
 
+This is [an example](https://github.com/restpack "RestPack on Github") inline link. And here is an image:
 
+![Alt text](https://secure.gravatar.com/avatar/81f93d382b6a3dfba1525853484cf2ed?s=420&d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-org-420.png "RestPack")
+
+***
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 {% highlight ruby %}
 module RestPack::Serializer::SideLoading
@@ -55,50 +52,12 @@ module RestPack::Serializer::SideLoading
       end
       side_loads
     end
-
-    private
-
-    def side_load(include, models, options)
-      association = association_from_include(include)
-
-      if supported_association?(association)
-        serializer = RestPack::Serializer::Factory.create(association.class_name)
-        return send("side_load_#{association.macro}", association, models, serializer)
-      else
-        return {}
-      end
-    end
-
-    def supported_association?(association)
-      [:belongs_to, :has_many].include?(association.macro)
-    end
-
-    def side_load_belongs_to(association, models, serializer)
-      foreign_keys = models.map { |model| model.send(association.foreign_key) }.uniq
-      side_load = association.klass.find(foreign_keys)
-
-      return {
-        association.plural_name.to_sym => side_load.map { |model| serializer.as_json(model) }
-      }
-    end
-
-    def side_load_has_many(association, models, serializer)
-      return {} if models.empty?
-      return serializer.class.page({
-        filters: { association.foreign_key.to_sym => models.map(&:id) }
-      })
-    end
-
-    def association_from_include(include)
-      possible_relations = [include.to_s.singularize, include.to_s.pluralize]
-      possible_relations.each do |relation|
-        association = self.model_class.reflect_on_association(relation.to_sym)
-        return association unless association.nil?
-      end
-
-      raise RestPack::Serializer::InvalidInclude.new,
-        ":#{include} is not a valid include for #{self.model_class}"
-    end
   end
 end
 {% endhighlight %}
+
+#H1
+##H2
+###H3
+####H4
+#####H5
