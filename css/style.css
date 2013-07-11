@@ -2,8 +2,7 @@ body {
   font-size: 18px;
   line-height: 26px;
   background-color: #eee;
-  background-image: url('/img/background.png');
-  background-attachment:fixed;
+  background-image: url('/img/rightback.png');
   font-family: 'Roboto', sans-serif;
   color: #444;
 }
@@ -20,16 +19,17 @@ ul, ol {
 .content {
   background-color: white;
   padding: 20px;
-  border-right: 1px solid #e0ebfa;
-  min-height: 1400px;
+  min-height: 1400px !important;
   max-width: 1000px;
+  box-shadow: 0px 0px 26px rgba(0, 0, 0, 0.25);
 }
 
 article { max-width: 920px; }
 
-article h2 {
+article h1 {
   color: #f16666;
   line-height: 26px;
+  font-size: 40px;
   margin-bottom: 2px;
   margin-top: 0;
   font-weight: bold;
@@ -42,8 +42,12 @@ article time {
 section.about {
   margin-top: 20px;
   padding: 20px;
+  min-width: 220px;
   background-color: rgba(255, 255, 255, .5);
   text-shadow: 1px 1px 2px white;
+  box-shadow: 0px 0px 26px rgba(0, 0, 0, 0.05);
+  border: 1px solid white;
+
 }
   section.about img.photo {
     float: left;
@@ -74,12 +78,9 @@ section.about {
     margin-top: -6px;
   }
 
-
-
   section.about p.summary {
     clear: both;
     font-size: 14px;
     line-height: 20px;
 
   }
-
