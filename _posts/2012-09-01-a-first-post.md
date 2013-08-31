@@ -7,5 +7,4 @@ title: First Post
 
 This is a sample first post.
 
-
-This is another paragraph.
+This is another paragraph. Another bit of text.

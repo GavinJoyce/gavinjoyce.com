@@ -13,3 +13,4 @@ site/_site/
 coverage
 .ruby-version
 *.psd
+s3_website.yml

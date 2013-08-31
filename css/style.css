@@ -2,7 +2,7 @@ body {
   font-size: 18px;
   line-height: 26px;
   background-color: #eee;
-  background-image: url('/img/rightback.png');
+  background-image: url('/img/back.png');
   font-family: 'Roboto', sans-serif;
   color: #444;
 }
@@ -14,6 +14,10 @@ h3 {
 
 ul, ol {
   margin-top: 10px;
+}
+
+#post-navigation {
+  text-align: right;
 }
 
 .content {
@@ -33,6 +37,14 @@ article h1 {
   margin-bottom: 2px;
   margin-top: 0;
   font-weight: bold;
+}
+
+article h1 a {
+  color: #f16666;
+}
+
+article h1 a:hover {
+  color: #C54242;
 }
 
 article time {
