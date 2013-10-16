@@ -6,7 +6,7 @@ tags: emberjs
 
 ###tl;dr: Ember.js components are amazing
 
-For the past while, I've been helping a client build an <a href="http://songspace.com/">ambitious web application</a> with Ember.js. This is the fifth significant Ember application that I've worked on, and I'm often still amazed at how well Ember deals with complexity.
+For the past while I've been helping <a href="http://songspace.com/">songspace.com</a> build an ambitious web application with <a href="http://emberjs.com/">Ember.js</a>. This is the fifth significant Ember application that I've worked on, and I'm often still amazed at just how well Ember deals with complexity.
 
 ---
 
@@ -16,7 +16,7 @@ For the past while, I've been helping a client build an <a href="http://songspac
 
 ---
 
-Ember Components are one of many reasons for this, they very neatly allow us to create decoupled views which can be reused throughout our application. Below is an example tag editor component (view the <a href="http://jsbin.com/eQOZoGe/302/edit" target="_blank">source on jsbin</a>)
+<a href="http://emberjs.com/guides/components/">Ember Components</a> are one of many reasons for this, they very neatly allow us to create decoupled views which can be reused throughout our application. Below tag editor component which consists of 30 lines of clean JavaScript. (view the <a href="http://jsbin.com/eQOZoGe/302/edit" target="_blank">source on jsbin</a>)
 
 ### Live demo:
 
@@ -59,3 +59,6 @@ App.TagEditorComponent = Ember.Component.extend({
   }
 });
 {% endhighlight %}
+
+
+### <a href="http://jsbin.com/eQOZoGe/302/edit">View code on jsbin.com >></a>
