@@ -6,7 +6,7 @@ This is the source to gavinjoyce.com, a blog powered by jekyll.
 
 1. bundle
 2. jekyll server -w
-3. open `http://localhost:4000/''
+3. open `http://localhost:4000/`
 
 ## Deployment
 
