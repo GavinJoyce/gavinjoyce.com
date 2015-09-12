@@ -1,7 +1,7 @@
 ---
 layout: blog_post
 title: Building a tag editor with Ember.js
-tags: emberjs
+tags: emberjs video
 ---
 
 ###tl;dr: Ember.js components are amazing
@@ -20,9 +20,7 @@ For the past while I've been helping <a href="http://songspace.com/">songspace.c
 
 ### Live demo:
 
-<iframe src="http://jsbin.com/eQOZoGe/301" width="100%" height="200px" border="0">
-
-</iframe>
+<a class="jsbin-embed" href="http://jsbin.com/eQOZoGe/302/embed?output">JS Bin on jsbin.com</a><script src="http://static.jsbin.com/js/embed.min.js?3.34.3"></script>
 
 ### 30 lines of simple, focused JavaScript:
 
